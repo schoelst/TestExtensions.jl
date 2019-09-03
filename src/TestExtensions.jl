@@ -1,4 +1,4 @@
-module TestExtension
+module TestExtensions
 
 
 import Test: @test, test_expr!, get_test_result, do_test, Returned

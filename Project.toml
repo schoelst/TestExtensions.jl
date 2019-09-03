@@ -1,4 +1,4 @@
-name = "TestExtension"
+name = "TestExtensions"
 uuid = "b33baada-ce31-11e9-1bde-a3cbe669430d"
 authors = ["Tobias Schoels <tobias.schoels@gmail.com>"]
 version = "0.1.0"
