@@ -1,5 +1,4 @@
 module TestExtension
-using Test
 
 
 import Test: @test, test_expr!, get_test_result, do_test, Returned
@@ -26,13 +25,11 @@ macro test(ex, msg, kws...)
     orig_ex = Expr(:inert, ex)
     result = get_test_result(ex, __source__)
     quote
-        if $(isa(result, Returned) && isa(result.value, Bool) && !result.value) 
+        if !(isa($result, Returned) && isa($result.value, Bool) && $result.value)
             @info $msg
         end
         do_test($result, $orig_ex)
     end
 end
-
-export @test
 
 end # module
